@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup , FormBuilder,Validators } from '@angular/forms';
+import { ApiService } from '../services/api.service';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-dailog',
@@ -10,7 +12,7 @@ export class DailogComponent implements OnInit {
 
   freshnessList=["Brand New","Second Hand","Refurbished"]
   productForm !: FormGroup
-  constructor(private formBuilder:FormBuilder) { }
+  constructor(private formBuilder:FormBuilder, private api:ApiService, private dialogRef:MatDialogRef<DailogComponent>) { }
 
   ngOnInit(): void {
     this.productForm = this.formBuilder.group({
@@ -23,6 +25,18 @@ export class DailogComponent implements OnInit {
     })
   }
   addProduct(){
-    console.log(this.productForm.value)
+    if(this.productForm.valid){
+      this.api.postProduct(this.productForm.value).subscribe({
+        next:(res)=>{
+          alert("Product Added Successfully");
+          this.productForm.reset();
+          this.dialogRef.close('Save');
+        },
+        error:()=>{
+          alert("Error While Adding The Product")
+        }
+      })
+    }
+    //console.log(this.productForm.value)
   }
 }

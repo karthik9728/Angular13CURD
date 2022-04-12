@@ -1,0 +1,68 @@
+{
+  "productList": [
+    {
+      "productName": "Samsung Galaxy A50",
+      "category": "Mobile",
+      "freshness": "Brand New",
+      "price": 50000,
+      "comment": "Model 2022",
+      "date": "2022-04-11T18:30:00.000Z",
+      "id": 1
+    },
+    {
+      "productName": "Samsung Galaxy A20",
+      "category": "Mobile",
+      "freshness": "Second Hand",
+      "price": 15000,
+      "comment": "Model 2020",
+      "date": "2022-04-09T18:30:00.000Z",
+      "id": 2
+    },
+    {
+      "productName": "Samsung Galaxy A70",
+      "category": "Mobile",
+      "freshness": "Refurbished",
+      "price": 10000,
+      "comment": "Old Model",
+      "date": "2016-07-09T18:30:00.000Z",
+      "id": 3
+    },
+    {
+      "productName": "Mango",
+      "category": "Food",
+      "freshness": "Brand New",
+      "price": 250,
+      "comment": "Sweet Food",
+      "date": "2022-04-11T18:30:00.000Z",
+      "id": 4
+    },
+    {
+      "productName": "Formal Shirt",
+      "category": "Dress",
+      "freshness": "Brand New",
+      "price": 1650,
+      "comment": "Formal Shirt Nike",
+      "date": "2022-04-11T18:30:00.000Z",
+      "id": 5
+    },
+    {
+      "productName": "Turtle neck T-shirt",
+      "category": "Dress",
+      "freshness": "Brand New",
+      "price": 500,
+      "comment": "Casual WROGN T-shirt",
+      "date": "2022-04-12T18:30:00.000Z",
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

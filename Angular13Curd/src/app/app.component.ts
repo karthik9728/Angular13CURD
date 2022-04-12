@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { DailogComponent } from './dailog/dailog.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular13Curd';
+
+  constructor(private dialog:MatDialog){}
+
+  openDialog() {
+    this.dialog.open(DailogComponent, {
+      width:'30%',
+    });
+  }
 }

@@ -31,7 +31,7 @@
       "productName": "Mango",
       "category": "Food",
       "freshness": "Brand New",
-      "price": 250,
+      "price": 240,
       "comment": "Sweet Food",
       "date": "2022-04-11T18:30:00.000Z",
       "id": 4
@@ -53,6 +53,15 @@
       "comment": "Casual WROGN T-shirt",
       "date": "2022-04-12T18:30:00.000Z",
       "id": 6
+    },
+    {
+      "productName": "Samsung Galaxy A71",
+      "category": "Mobile",
+      "freshness": "Refurbished",
+      "price": 10000,
+      "comment": "Old Model",
+      "date": "2016-07-09T18:30:00.000Z",
+      "id": 7
     }
   ],
   "comments": [

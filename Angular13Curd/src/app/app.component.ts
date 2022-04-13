@@ -14,7 +14,7 @@ import {MatTableDataSource} from '@angular/material/table';
 export class AppComponent implements OnInit {
   title = 'Angular13Curd';
 
-  displayedColumns: string[] = ['productName', 'category','date','freshness','price','comment'];
+  displayedColumns: string[] = ['productName', 'category','date','freshness','price','comment','action'];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -25,7 +25,22 @@ export class AppComponent implements OnInit {
   openDialog() {
     this.dialog.open(DailogComponent, {
       width:'30%',
-    });
+    }).afterClosed().subscribe(val=>{
+      if(val ==="Save"){
+        this.getAllProduct();
+      }
+    })
+  }
+
+  editProduct(row:any){
+    this.dialog.open(DailogComponent,{
+      width:'30%',
+      data:row
+    }).afterClosed().subscribe(val=>{
+      if(val ==="Update"){
+        this.getAllProduct();
+      }
+    })
   }
 
   getAllProduct(){
